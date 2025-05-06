@@ -2,7 +2,10 @@ package com.informaperu.web.registropagos.model;
 
 
 
+import java.time.LocalDateTime;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,6 +15,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.PrePersist;
+import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -33,13 +38,27 @@ public class Asesor {
     private String rango;
     
     @ManyToOne
+    @JsonProperty("encargado_id")
     @JoinColumn(name = "encargado_id", nullable = false)
     @JsonIgnore
     private Encargado encargado;
     
+    @JsonProperty("created_at")
     @Column(name = "created_at", updatable = false)
-    private java.sql.Timestamp createdAt;
-    
+    private LocalDateTime createdAt;
+
+    @JsonProperty("updated_at")
     @Column(name = "updated_at")
-    private java.sql.Timestamp updatedAt;
+    private LocalDateTime updatedAt;
+
+    @PrePersist
+    public void prePersist() {
+    	createdAt = LocalDateTime.now();
+        updatedAt = LocalDateTime.now();
+    }
+
+    @PreUpdate
+    public void preUpdate() {
+    	updatedAt = LocalDateTime.now();
+    }
 }

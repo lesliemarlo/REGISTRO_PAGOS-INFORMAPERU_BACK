@@ -103,6 +103,6 @@ public class Pago {
     }
 
     public enum Empresa {
-        EMPRESA1, EMPRESA2
+    	PROEMPRESA, INCLUSIVA
     }
 }
