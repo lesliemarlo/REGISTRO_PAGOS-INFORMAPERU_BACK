@@ -70,6 +70,8 @@ public class Pago {
     @Column(name = "importe")
     private BigDecimal importe;
 
+    
+    
     @JsonProperty("empresa")
     @Column(name = "empresa")
     @Enumerated(EnumType.STRING)
@@ -105,4 +107,9 @@ public class Pago {
     public enum Empresa {
     	PROEMPRESA, INCLUSIVA
     }
+    
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Estado estado = Estado.HABILITADO;
+
 }

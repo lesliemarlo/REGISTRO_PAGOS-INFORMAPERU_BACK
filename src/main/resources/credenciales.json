@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "formulario-de-pagos-459015",
+  "private_key_id": "8a060daf816358c00ef6a69c0324ecc5696e0852",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDHVu5Yxg9YCPez\nnisOPlG7rk23clZXRcmL/zynORRQ6WWRwM7eZWvSfED5eumr4c2nfiDRU71JQIJv\nULE+AJsdvQjY/PMSr8xshO+Rk92znKmoVXqUjamsjCcJ8yulbJLEJhgKr9VPHF2d\nMWIjLpugJ7TMzAUKzemXPAPpoP59GsSlkjcUqB6CBaOfYZ0oggL164mIwMn28wVO\n+sJnYRMeZ2jKRsjEgg0CEj82klpUXpa2gFGUBcATiojsoUexerQusPykQfQlKEUV\no16iZ9pIGwypbebiy2QJC3+5lSgQjV//dh99J8rT27pE+It+4tsie0zU8GTt1bjC\nv1nl+vd1AgMBAAECggEAAc1a5UmRHPIjzydoaz4L/h7iy/xIJIzYeCAMG9Trxpl9\nlhZAqIkRMvt1mOvQDgJCGjgNMudHaFChfUElARL/VAL///o1dl9JgVeoVNAZ6oRJ\nkmCHda1cMdeoiLH+nIXBQ+22PO5/BrKSdBfcs8W5mXaSb2GO0ByxdnEP9f5DHr1p\nnjIwgzekvND74QukIrhCeHM7Kd1ewL4MyZ48bgw0SQfxc2iv8mDfWbK/eOvB/aKU\nxVvY4Ria4naigFLQoqDGMqp5Wx2y6t1Idm98+1wHKtnJZ7GAgovjuxewm3lHG4Ch\nFqrq5wyLJkz1K55rZjFHpe1iPO9rxNM65PR7aUmaEQKBgQDzNKFAR30Brtg4e3eW\n4RZ9rgZ4ugfpvsiUtA9es4HNkT+Hjgz5jBSWwIOX2LgeL6leMeYwfWbYUsTBOZDe\nvCc8BVB3fRuvxbUKxaPi3iBW4qXViogs9lET6DhG3HZIYz19X2fpX/UDZbOzLH9U\nEmubqc6t0+46etighUzsyn9YuQKBgQDR04ktf4t7rlsiG7I1poUlfLxm9qyC2B2u\nUXUywaPvQJTEyF8+4aj9B9Vwa8uVMhIn6Mpq/xRvm9KKlHd51WRlLTD7t2+0QEEu\nxK1tJGj8pMaMrbxgP7G2wIIfhGFghzAWxvBeT465PUlPN8JxtFPjIq3YjBDEl0hl\nSLvvear+nQKBgGI+fm0i88J8SOf4KEUQxC8c34xhSdUItqorWpIc3XCXHhy6K0+b\nYK3NMttiNm4rPrXIXn50CdmVBdowUO9I/mhmlSzPoyGMMigZ0qxQoqu2ftsWTRAs\nqG/sPN+TK0zumeZNZgKGOsmWidL1RLJHhqSpIc5icDe7bErbzklRO8QxAoGAS4U7\nhmi1p1pl6qzVQ4IfwhJXLSfzh1SJukgPSqlve5le8kS8I0HNNOUw6TmjGJvg9QRQ\ndppAnLsU2FP/fJZVgCT30GGBjvrhexfG49WLBAO6gr+1YV8Lc59uNjHLapa9tDT+\nJrOzxvBMBnsnPQ2Oc93zfFFNZ7SblfjLy7Ga3fECgYEAySKG7NNu/U6rmrLGkJV2\n1k1E0YC32eFA4QNR0KDDPWujPazBd1/LXY6hWv6zCTZvi7O3hBzVsuaSN5SDrn2y\nX2qenxYZ0EAcj7N+BH8iyjZsZxReCdUyhv4GNtroB1dIfngSoSJpM+Bx1D8D19/Q\no424OOcqs9K5BO8Ia1iU6j4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "informaperu-pagos@formulario-de-pagos-459015.iam.gserviceaccount.com",
+  "client_id": "108963904149768738371",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/informaperu-pagos%40formulario-de-pagos-459015.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
