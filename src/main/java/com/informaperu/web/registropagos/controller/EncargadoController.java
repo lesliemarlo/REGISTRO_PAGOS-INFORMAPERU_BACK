@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.informaperu.web.registropagos.model.Encargado;
+import com.informaperu.web.registropagos.model.Estado;
+import com.informaperu.web.registropagos.model.Pago;
 import com.informaperu.web.registropagos.services.EncargadoService;
 
 @RestController
@@ -42,10 +44,21 @@ public class EncargadoController {
         return encargadoService.update(id, encargado);
     }
 
-
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deshabilitar/{id}")
     public void delete(@PathVariable("id") Long id) {
-        encargadoService.delete(id);
+        Encargado encargado = encargadoService.getById(id);
+        encargado.setEstado(Estado.DESHABILITADO);
+        encargadoService.update(id, encargado);
     }
+
+    //restore
+    @PutMapping("/restore/{id}")
+    public Encargado restore(@PathVariable("id") Long id) {
+        return encargadoService.restore(id);
+    }
+
+   
+    
+    
 }
 

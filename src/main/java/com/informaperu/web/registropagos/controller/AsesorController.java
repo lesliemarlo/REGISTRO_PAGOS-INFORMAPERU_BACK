@@ -38,9 +38,16 @@ public class AsesorController {
     }
 
 
-    @DeleteMapping("/delete/{asesorId}/encargado/{encargadoId}")
+    @DeleteMapping("/deshabilitar/{asesorId}/encargado/{encargadoId}")
     public void deleteAsesor(@PathVariable("asesorId") Long asesorId, @PathVariable("encargadoId") Long encargadoId) {
         asesorService.deleteAsesor(asesorId, encargadoId);
+    }
+
+ // recuperar
+
+    @PutMapping("/restore/{asesorId}/encargado/{encargadoId}")
+    public AsesorDTO restoreAsesor(@PathVariable("asesorId") Long asesorId, @PathVariable("encargadoId") Long encargadoId) {
+        return asesorService.restoreAsesor(asesorId, encargadoId);
     }
 
 
