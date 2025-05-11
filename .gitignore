@@ -31,7 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/resources/credenciales.json
 .env
-credenciales.json
 application-local.properties
-/target/
