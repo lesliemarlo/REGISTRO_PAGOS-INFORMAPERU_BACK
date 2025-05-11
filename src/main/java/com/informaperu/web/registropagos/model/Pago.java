@@ -72,7 +72,10 @@ public class Pago {
 
     
     
-    
+    @JsonProperty("empresa")
+    @Column(name = "empresa")
+    @Enumerated(EnumType.STRING)
+    private Empresa empresa;
 
     @JsonProperty("voucher_link")
     @Column(name = "voucher_link")
@@ -101,7 +104,10 @@ public class Pago {
         POLITICA, EXCEPCION, PARCIAL, CONVENIO
     }
 
-   
+    public enum Empresa {
+    	PROEMPRESA, INCLUSIVA
+    }
+    
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Estado estado = Estado.HABILITADO;
