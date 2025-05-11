@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+.env
+credenciales.json
+application-local.properties
+/target/

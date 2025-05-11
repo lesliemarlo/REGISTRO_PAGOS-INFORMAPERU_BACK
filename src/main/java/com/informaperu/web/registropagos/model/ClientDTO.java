@@ -10,6 +10,8 @@ public class ClientDTO {
 
     
     private String codigo_contacto;
+    
+    
     public String getCodigo_contacto() {
 		return codigo_contacto;
 	}

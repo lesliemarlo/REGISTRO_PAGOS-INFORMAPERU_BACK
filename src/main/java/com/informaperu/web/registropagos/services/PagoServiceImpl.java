@@ -53,7 +53,6 @@ public class PagoServiceImpl implements PagoService {
         pagoExistente.setFechaVoucher(pagoActualizado.getFechaVoucher());
         pagoExistente.setTipoPago(pagoActualizado.getTipoPago());
         pagoExistente.setImporte(pagoActualizado.getImporte());
-        pagoExistente.setEmpresa(pagoActualizado.getEmpresa());
         pagoExistente.setVoucherLink(pagoActualizado.getVoucherLink());
         pagoExistente.setEstado(pagoActualizado.getEstado());
 
