@@ -36,3 +36,4 @@ build/
 application-local.properties
 
 /src/main/resources/credenciales.json
+/src/main/resources/credenciales.json
