@@ -11,15 +11,17 @@ import com.informaperu.web.registropagos.security.AsesorDTO;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@Transactional
 public class AsesorService {
     private final AsesorRepository asesorRepository;
 
     public AsesorService(AsesorRepository asesorRepository) {
         this.asesorRepository = asesorRepository;
     }
-
+    @Transactional(readOnly = true)
     public List<AsesorDTO> getAsesoresByEncargadoId(Long encargadoId) {
         List<Asesor> asesores = asesorRepository.findByEncargadoIdAndEstado(encargadoId, com.informaperu.web.registropagos.model.Estado.HABILITADO);
         return asesores.stream().map(this::convertToDTO).collect(Collectors.toList());
@@ -36,13 +38,14 @@ public class AsesorService {
     }
     
     //CRUD
+    @Transactional
     public AsesorDTO createAsesor(Long encargadoId, Asesor asesor) {
         asesor.setEncargado(new Encargado());
         asesor.getEncargado().setId(encargadoId);
         Asesor saved = asesorRepository.save(asesor);
         return convertToDTO(saved);
     }
-
+    @Transactional(timeout = 10)
     public AsesorDTO updateAsesor(Long asesorId, Long encargadoId, Asesor updatedData) {
         Asesor asesor = asesorRepository.findById(asesorId)
             .orElseThrow(() -> new RuntimeException("Asesor no encontrado"));
@@ -58,7 +61,7 @@ public class AsesorService {
 
         return convertToDTO(asesorRepository.save(asesor));
     }
-
+    @Transactional
     public void deleteAsesor(Long asesorId, Long encargadoId) {
         Asesor asesor = asesorRepository.findById(asesorId)
             .orElseThrow(() -> new RuntimeException("Asesor no encontrado"));
@@ -75,7 +78,8 @@ public class AsesorService {
  // AsesorService
 
  // Recuperar un asesor eliminado y habilitarlo
- public AsesorDTO restoreAsesor(Long asesorId, Long encargadoId) {
+    @Transactional
+    public AsesorDTO restoreAsesor(Long asesorId, Long encargadoId) {
      Asesor asesor = asesorRepository.findById(asesorId)
          .orElseThrow(() -> new RuntimeException("Asesor no encontrado"));
 

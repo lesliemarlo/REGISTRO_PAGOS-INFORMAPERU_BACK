@@ -4,6 +4,9 @@ import com.informaperu.web.registropagos.model.Encargado;
 import com.informaperu.web.registropagos.model.Estado;
 import com.informaperu.web.registropagos.model.Pago;
 import com.informaperu.web.registropagos.repository.PagoRepository;
+
+import jakarta.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
