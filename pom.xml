@@ -110,12 +110,15 @@
 	<build>
     <plugins>
         <plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-resources-plugin</artifactId>
-  <configuration>
-    <encoding>UTF-8</encoding>
-  </configuration>
-</plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <configuration>
+                <encoding>UTF-8</encoding>
+                <nonFilteredFileExtensions>
+                    <nonFilteredFileExtension>properties</nonFilteredFileExtension>
+                </nonFilteredFileExtensions>
+            </configuration>
+        </plugin>
 
         <plugin>
             <groupId>org.springframework.boot</groupId>
